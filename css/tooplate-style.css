@@ -164,7 +164,7 @@ p {
 
 .banner .left-side {
 	text-align: left;
-	background-color: rgba(0, 0, 0, 0.5);
+	 
 	height: 100%;
 	margin-left: -100vh;
 	padding-left: 100vh;
@@ -796,7 +796,7 @@ footer p em {
 
 
 .page-heading {
-	background-image: url(../img/heading-bg.jpg);
+	background-image: url(../img/banner-bg.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center center;

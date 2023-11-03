@@ -10,7 +10,7 @@
     http://www.tooplate.com/view/2093-flight
 
     -->
-    <title>Flight - Contact Page</title>
+    <title>Flight - Booking Confirmation Page</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -26,9 +26,118 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
 
     <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    <script>
+        function getParams() {
+            var idx = document.URL.indexOf('?');
+            var params = {}; // simple js object
+
+        }
+
+    </script>
+   
+    <style>
+        table, th, td {
+            border: 1px solid black;
+        }
+    </style>
 </head>
 
 <body>
+
+   
+
+    <section class="page-heading" id="top">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="logo">
+                        <img src="img/logo.png" alt="Flight Template">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="page-direction-button">
+                        <a href="index.html"><i class="fa fa-home"></i>Go Back Home</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+    <section class="map">
+     
+
+        <h3 style="width:60%;margin-left: 20px; font-size:large" >Flight ticket booking confirmation</h3>
+
+        <table   style="width:60%;margin-left: 20px;">
+            <tr>
+                <th>From</th>
+                <th>TO</th>
+                <th>Deparure</th>
+                <th>Return</th>
+                <th>Trip</th>
+
+
+            </tr>
+            <tr>
+                <td> <p id="From"></p> </td>
+                <td><p id="To"></p></td>
+
+                <td><p id="Deparure"></p></td>
+                <td><p id="Return"></p></td>
+                <td><p id="Trip"></p></td>
+            </tr>
+           
+        </table>
+
+
+        <script>
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const myParam = urlParams.get('from');
+            document.getElementById("From").innerHTML = myParam;
+
+            const to = urlParams.get('to');
+            document.getElementById("To").innerHTML = to;
+
+            const deparure = urlParams.get('deparure');
+            document.getElementById("Deparure").innerHTML = deparure;
+
+
+            const return1 = urlParams.get('return');
+            document.getElementById("Return").innerHTML = return1;
+
+
+
+            const trip = urlParams.get('trip');
+            document.getElementById("Trip").innerHTML = trip;
+
+
+            
+
+        </script>
+
+
+
+
+
+
+
+
+
+
+    </section>
+
+
 
     <footer>
         <div class="container">
@@ -38,20 +147,12 @@
                         <a href="#" class="scroll-top">Back To Top</a>
                     </div>
                 </div>
-                <div class="col-md-12">
-                    <ul class="social-icons">
-                        <li><a href="https://www.facebook.com/tooplate"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                        <li><a href="#"><i class="fa fa-rss"></i></a></li>
-                        <li><a href="#"><i class="fa fa-behance"></i></a></li>
-                    </ul>
-                </div>
+
                 <div class="col-md-12">
                     <p>
-                        Copyright &copy; 2018 Flight Tour and Travel Company
+                        Copyright &copy; 2023 future Company
 
-                        | Design: <a href="http://www.code-projects.org" target="_parent"><em>Code Projects</em></a>
+                        |
                     </p>
                 </div>
             </div>
@@ -67,16 +168,12 @@
 
     <script src="js/vendor/bootstrap.min.js"></script>
 
-    <script src="js/datepicker.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
     <script type="text/javascript">
         $(document).ready(function () {
-
-
-
             // navigation click actions
             $('.scroll-link').on('click', function (event) {
                 event.preventDefault();
